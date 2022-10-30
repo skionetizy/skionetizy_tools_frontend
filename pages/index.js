@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Navbar from '../components/Navbar/Navbar'
 
 export default function Home() {
   return (
@@ -11,58 +12,71 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <header>
+        <Navbar />
+      </header>
+
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <section className={styles.aboutSection}>
+          <h2 className={styles.sectionHeading}>About us</h2>
+          <div className={styles.aboutFlex}>
+            <div className={styles.imageCtn}>
+              <img src="./about-us.png" alt=""  />
+            </div>
+            <div>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+              </p>
+            </div>
+          </div>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+          <div >
+            <h2 className={styles.sectionHeading} >Lorem ipsum</h2>
+            <p className={styles.sectionText}>Lorem Ipsum is simply dummy text of the printing </p>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+            <div className={styles.cardsCtn}>
+              <div>
+                <div className={styles.card}>
+                  <img src="./grammer-check.png" alt="Grammer checker" />
+                  <p>Create grammar checking easy, precise and effective.</p>
+                  <a href="#" className={styles.linkCtn}>
+                      <span>Learn more </span>
+                      <img src="./Arrow 1.png" alt="Arrow" />
+                  </a>
+                </div>
+                <button className={styles.cardBtn}>Grammer Check</button>
+              </div>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+              <div>
+                <div className={styles.card}>
+                  <img src="./keyword-finder.png" alt="Grammer checker" />
+                  <p>Find keywords easily, precisely and effectively.</p>
+                  <a href="#" className={styles.linkCtn}>
+                    <span>Learn more </span>
+                    <img src="./Arrow 1.png" alt="Arrow" />
+                  </a>
+                </div>
+                <button className={styles.cardBtn}>Keyword Finder</button>
+              </div>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+              <div>
+                <div className={styles.card}>
+                  <img src="./keyword-density-analyser.png" alt="Grammer checker" />
+                  <p>Find keywords easily, precisely and effectively.</p>
+                  <a href="#" className={styles.linkCtn}>
+                    <span>Learn more </span>
+                    <img src="./Arrow 1.png" alt="Arrow" />
+                  </a>
+                </div>
+                <button className={styles.cardBtn}>Keyword Density Analyzer</button>
+              </div>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+            </div>
+          </div>
+        </section>
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
       </footer>
     </div>
   )
